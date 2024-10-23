@@ -27,12 +27,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci --ignore-scripts
       - run: npm run test:ci
-      - run: npm install codecov -g
-        if: ${{ matrix.node-version == 'current' }}
-      - run: npm run codecov:patch
-        if: ${{ matrix.node-version == 'current' }}
-      - run: codecov -f ./coverage/clover.xml -t d9e3069a-1d67-4b47-942a-abafd374a8e8 --commit=$GITHUB_SHA --branch=${GITHUB_REF##*/}
-        if: ${{ matrix.node-version == 'current' }}
+      - uses: codecov/codecov-action@v4
+        with:
+          fail_ci_if_error: true # optional (default = false)
+          files: ./coverage/clover.xml # optional
+          flags: unittests # optional
+          name: codecov-umbrella # optional
+          token: ${{ secrets.CODECOV_TOKEN }} # required
+          verbose: true # optional (default = false)
   build:
     name: Build
     runs-on: ubuntu-latest
