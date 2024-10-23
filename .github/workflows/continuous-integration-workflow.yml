@@ -30,6 +30,7 @@ jobs:
       - run: npm install codecov -g
         if: ${{ matrix.node-version == 'current' }}
       - run: npm run codecov:patch
+        if: ${{ matrix.node-version == 'current' }}
       - run: codecov -f ./coverage/clover.xml -t ${{ secrets.CODECOV_TOKEN }} --commit=$GITHUB_SHA --branch=${GITHUB_REF##*/}
         if: ${{ matrix.node-version == 'current' }}
   build:
