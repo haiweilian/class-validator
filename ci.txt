@@ -1,2 +1,16 @@
 1
 2
+
+query {
+  branch: 'merge',
+  build: '11475919539',
+  commit: '60276f82624d784a7c0f58627e09e71b94e83c37',
+  service: 'github-actions',
+  slug: 'haiweilian/class-validator',
+  pr: '1',
+  yaml: '/home/runner/work/class-validator/class-validator/codecov.yml',
+  token: '***',
+  package: 'node-v3.8.2'
+}
+
+result { message: 'Repository not found' }
