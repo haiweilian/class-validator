@@ -17,3 +17,8 @@ result { message: 'Repository not found' }
 
 
 https://github.com/codecov/codecov-action/issues/1431
+
+
+github action pr get secrets
+https://stackoverflow.com/questions/73866908/github-actions-main-repository-secret-not-picked-up-from-pull-request-build
+https://securitylab.github.com/resources/github-actions-preventing-pwn-requests/
