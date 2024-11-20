@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm ci --ignore-scripts
       - run: npm run test:ci
-      - uses: codecov/codecov-action@v5
+      - uses: codecov/codecov-action@v4
         if: ${{ matrix.node-version == 'current' }}
         with:
           files: ./coverage/clover.xml
