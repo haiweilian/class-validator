@@ -29,7 +29,7 @@ jobs:
       - run: npm run test:ci
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
-        if: ${{ matrix.node-version == 'current' }}
+        if: ${{ matrix.node-version == 'current' && github.actor != 'dependabot[bot]' }}
         with:
           files: ./coverage/clover.xml
           directory: ./coverage/lcov-report/
