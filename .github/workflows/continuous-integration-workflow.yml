@@ -28,7 +28,7 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run test:ci
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
         if: ${{ matrix.node-version == 'current' }}
         with:
           files: ./coverage/clover.xml
