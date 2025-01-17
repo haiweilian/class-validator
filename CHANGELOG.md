@@ -2,7 +2,7 @@
 
 _This changelog follows the [keep a changelog][keep-a-changelog]_ format to maintain a human readable changelog.
 
-### [0.14.2](https://github.com/typestack/class-validator/compare/v0.14.1...v0.14.2) (2024-10-18)
+### [0.14.2](https://github.com/typestack/class-validator/compare/v0.14.1...v0.14.2) (2025-01-17)
 
 #### Added
 
@@ -11,6 +11,8 @@ _This changelog follows the [keep a changelog][keep-a-changelog]_ format to main
 #### Fixed
 
 - fix forbidUnknownValues to true by default when validatorOptions is undefined ([#2196](https://github.com/typestack/class-validator/issues/2196)) , closes [#1906](https://github.com/typestack/class-validator/issues/1906)
+
+- fix options receiving error in `@IsBase64` decorator ([#2549](https://github.com/typestack/class-validator/issues/2549)) , closes [#2548](https://github.com/typestack/class-validator/issues/2548)
 
 #### Changed
 
